@@ -1,0 +1,744 @@
+
+/*
+header,
+footer,
+nav,
+div,
+main,
+section {
+    outline: 1px solid #cccccc;
+
+}*/
+
+/*----------------------LAYOUT---------------*/
+
+*,*:before, *:after {
+    box-sizing: border-box;
+}
+.row{
+    width: 100%; /*width of the layout*/
+    margin-left: auto;
+    margin-right: auto;
+    overflow:hidden; /* constrains both floated elements and helps with margin-collapse*/
+    
+}
+.column {
+	float: left;
+	/*width:33.33%;*/
+	margin: auto;
+	height: 100%;	
+}
+
+.span-3 {width: 25%;}
+.span-4 {width: 33.333%;}
+.span-5 {width: 41.666%;}
+.span-6 {width: 50%;}
+.span-7 {width: 58.33%;}
+.span-8 {width: 66.666%;}
+.span-9 {width: 75%;}
+.span-1-5 {width: 20%;}
+.span-12 {width: 100%;}
+
+a{
+	color:#009570;	
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.8em;
+	font-family: 'Libre Franklin', Raleway, Helvetica, sans serif;
+	font-weight: lighter;
+	color: rgba(15,15,15, 0.7);
+	text-align: center;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+
+}
+
+h2 {
+	font-size: 1.1em;
+	padding: 10px 20px;
+	text-align: center;
+	font-weight: lighter;
+	color: #7d7e7e;
+	
+}
+h3 {
+	font-size: 2em;
+	font-weight: lighter;
+	color: #20b884;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	padding-top: 30px;
+}
+h4 {
+	font-size: 1em;
+	font-weight: normal;
+	color: #20b884;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+h5{
+	font-size: 2em;
+	color:#fff;
+	font-family: 'Libre Franklin', Raleway, helvetica, Open sans, sans serif;
+	font-weight: lighter;
+}
+
+ body {
+ 	
+ 	font-family: 'Raleway', helvetica, verdana, sans serif;
+ 	line-height: 1.5;
+ }
+
+ img,svg,iframe,video,audio {
+    vertical-align:middle; /*remove the little space in the bottom*/
+}
+
+img {
+	max-width: 100%;
+}
+
+.logo {
+	width: 140px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+li {
+	display: inline-block;
+}
+
+.nav-bar li {
+	
+	text-transform: uppercase;
+	font-family: 'Libre Franklin', Raleway, Helvetica, sans serif;
+}
+
+.nav-bar {
+	margin: 0 auto;
+	width: 80%;
+	/*background-color: rgba(28, 28, 28, 0.1);*/
+	padding: 20px;
+	text-align: center;	
+}
+
+.nav-bar a {
+	text-decoration: none;
+	color: #4d4d4d;
+	font-weight: 400;
+	font-size: 0.9em;
+	padding: 10px 20px 0;
+	transition: all .4s;
+}
+.nav-bar a:hover {
+	border-bottom: 2px solid rgba(15,15,15, 0.5);
+	padding: 10px 20px;	
+}
+
+.page-header {
+	background-color: white;
+	border-top: 4px solid rgba(15,15,15, 0.5);
+	border-left: 4px solid rgba(15,15,15, 0.5);
+	border-right: 4px solid rgba(15,15,15, 0.5);
+	border-bottom: 4px solid rgba(15,15,15, 0.5);
+	margin: 10px auto 130px;
+	width: 90%;
+	position: relative;
+	padding-bottom: 5em;	 	
+}
+	
+.main-banner-text{
+	
+	width: 70%;
+	background-color: #fff;
+	position:absolute;
+	bottom: -17%;
+	left: 0;
+	right:0;
+/*	text-transform: uppercase;
+*/	height: 9em;
+	text-align: center;
+
+}
+
+.btn-listings {
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: rgba(15,15,15, 0.7);
+	border: 4px solid rgba(15,15,15, 0.5);
+	font-size: 0.9em;
+	font-weight: 600;
+	position: relative;
+	padding: 15px 80px;
+	
+}
+
+.steve {
+	background-color: #312f2e;
+	height: 300px;
+	width: 100%;
+
+}
+
+.span-4 p {
+	color: #c3c1c0;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 40px;
+	font-size: 0.9em;
+
+}
+
+.btn-buyer-seller {
+	text-transform: uppercase;
+	text-align: center;
+	border: 4px solid #009570;
+	font-size: 0.8em;
+	font-weight: bolder;
+	padding: 20px;
+	width: 70%;
+	display: block;
+	color: #c3c1c0;
+}	
+
+.steve-photo {
+	width: 90%;
+	padding: 30px 0 0 150px;
+}
+
+footer {
+	background-color: rgba(5, 5, 5, 0.9);
+}
+
+.contact-footer {
+	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
+
+}
+
+.newsletter{
+	
+	margin-top: 20px;
+	font-family: 'Raleway', sans serif;
+	font-size: 0.8em;
+	color: #7d7e7e;
+}
+
+.column #email-newsletter {
+	background-color: white;
+	padding: 10px 70px 10px 4px;
+	margin: 0;
+	font-size: 0.8em;
+	height: 30px;
+	width: 230px;
+	float: left;
+	border:none;
+
+}
+.column #btn-newsletter {
+	background-color: #312f2e;
+	padding: 10px 30px;
+	font-size: 0.8em;
+	display: block;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:white;
+	border: none;
+	
+}
+
+span {
+	color: #4d4d4d;
+	font-weight: 600;
+}
+.social-media {
+	text-align: left;
+	padding-top: 30px;
+	font-size: 1.8em;
+
+}
+
+.sub-footer {
+	text-align: center;
+	color: #666;
+	font-size: 0.9em;
+	font-family: 'Raleway', sans serif;
+	font-weight: lighter;
+}
+
+/* --------------------- INNER PAGE General STYLING -----------------*/
+
+.inner-page-title {
+	
+	width: 40%;
+	background-color: #fff;
+	position:absolute;
+	bottom: -7%;
+	left: 0;
+	right:0;
+	height: 4em;
+	text-align: center;
+}
+
+/* ----------------PROPERTIES PAGE STYLING------------------*/
+
+
+.g-category a {
+    color: #4D4D4D;        
+    
+}
+
+.g-category li {
+    font-size: 0.8em;
+    display: inline;
+    padding: 5px;
+    margin: 0;
+    font-size: 0.7em;
+    border-right: 1px solid grey;   
+}
+.g-description { 
+    border: 2px solid grey;
+    width: 120px;
+    padding: 7px;
+    margin: 10px auto;
+}
+
+.btn-details {   
+    font-size: 0.8em;
+    color: #4d4d4d;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+.g-sold{
+	background-color: #E84461;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Libre Franklin', Raleway, Helvetica, sans serif;
+	font-weight: lighter;
+
+}
+.g-new {
+	background-color: #20B884;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Libre Franklin', Raleway, Helvetica, sans serif;
+	font-weight: lighter;
+	
+}
+.fa {
+	padding-right: 4px;
+}
+.gallery {
+	width: 75%;
+	margin:auto;
+	margin-top: -100px;
+
+}
+
+.g-item {
+    text-align: center;
+    height: 20%;
+    width: 90%;
+    border: 2px solid grey;
+   	margin: 20px auto;
+   	
+}
+
+.g-category li:last-child{
+    border: none;
+}
+.more {
+	width: 50%;
+	margin: 80px auto;
+	text-align: center;
+	
+}
+.more-numbers a{
+	text-decoration: none;
+	color: #4d4d4d;
+	padding: 20px;
+	font-size: 1.3em;
+}
+.btn-more {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #4d4d4d;
+	display: block;
+	border: 2px solid #4d4d4d;
+	padding: 10px 50px;
+	font-weight: 600;
+
+}
+
+/* ------------------- Home page banner slider --------------------*/
+
+.banner-slider {
+    min-height: 350px;
+    position: relative;
+}
+
+.banner-slides,
+.banner-slides:after { 
+    width: 100%;
+    height: 70%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+
+.banner-slides li span { 
+    width: 90%;
+    height: 350px;
+    position: absolute;
+    left: 60px;
+    margin: auto;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0;
+    z-index: 0;
+    backface-visibility: hidden;
+    animation: imageAnimation 35s linear infinite 0s; 
+}
+
+.banner-slides li:nth-child(1) span { 
+    background-image: url(../img/vic1.jpg) 
+}
+.banner-slides li:nth-child(2) span { 
+    background-image: url(../img/vic2.jpg);
+    animation-delay: 5s; 
+}
+.banner-slides li:nth-child(3) span { 
+    background-image: url(../img/vic3.jpg);
+    animation-delay: 10s; 
+}
+.banner-slides li:nth-child(4) span { 
+    background-image: url(../img/vic7.png);
+    animation-delay: 15s; 
+}
+.banner-slides li:nth-child(5) span { 
+    background-image: url(../img/whale.jpg);
+    animation-delay: 20s; 
+}
+.banner-slides li:nth-child(6) span { 
+    background-image: url(../img/vic8.jpg);
+    animation-delay: 25s; 
+}
+.banner-slides li:nth-child(7) span { 
+    background-image: url(../img/vic6.jpg);
+    animation-delay: 30s; 
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .banner-slides li span{
+    opacity: 1;
+}
+
+/*-------------------- SEARCH BAR --------------------*/
+
+::placeholder {
+  color: #f2f2f2;
+  font-weight: 200;
+}
+
+input {
+  appearance: none;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+}
+
+input[type="search"] {
+  appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  appearance: none;
+}
+
+.form__field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__input {
+  flex-grow: 1;
+}
+
+.search {
+  border: 2px solid #4d4d4d;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 1rem;
+  
+}
+.search select{
+	border: none;
+	outline: none;
+	text-align: center;
+	margin-right: 10px;
+	background-color: #fff;
+	color: #4d4d4d;
+
+}
+
+.search input[type="submit"] {
+  background-color: #4d4d4d;
+  color: white;
+  font-weight: normal;
+  margin-left: 0;
+  padding: 10px 70px;
+  border: 1px solid #4d4d4d;
+}
+
+
+/* ---------------------About page styling-----------------*/
+
+.about-steve{
+	margin-bottom: 60px;
+}
+.about-photo .about-steve-img {
+	width: 70%;
+	float: right;
+	
+}
+
+.about-text {
+	padding-top: 40px;
+	
+
+}
+.about-text h3 {
+	padding-left: 50px;
+	color: #414343;
+	font-weight: lighter;
+}
+.about-text p {
+	text-align: justify;
+	padding: 0 50px;
+	color: #4d4d4d;
+	font-family: 'Libre Franklin', Open Sans, helvetica, sans serif;
+	font-weight: lighter;
+	
+
+}
+
+.fam-img{
+	width: 45%;
+	float: right;
+	padding: 0 40px;
+}
+
+.testimonials {
+	background-color: #312f2e;
+	padding: 10px 100px 100px 100px;
+}
+.testimonials h5 {
+	text-align: left;
+	padding-left: 15%;
+}
+
+.testimonials-text {
+	width: 70%;
+	margin: auto;
+	text-align: justify;
+	color: #a4a4a4;
+	border-left: 3px solid #009570;
+	padding-left: 40px;
+	padding-right: 60px;
+}
+.page-content .steve-about{
+	background-color: white;
+}
+.steve-about p, .steve-about a, .steve-about h3{
+	color: #4D4D4D;
+}
+
+/* -------------------CONTACT PAGE STYLING------------------*/
+
+.contact-cont {
+    text-align: left;
+    width: 70%;
+    margin: 100px auto;
+
+}
+
+.contact-cont h4 {
+	font-family: 'Libre Franklin', Raleway, Helvetica, sans-serif;
+	font-size: 1em;  
+	font-weight: 400;
+	margin: 20px 0;
+	color:#20B884;
+	text-align: left;
+}
+
+.contact-cont label {
+    font-size: 0.9em;
+    line-height: 2;
+    color: #4d4d4d;
+    font-weight: 600;
+}
+.contact-cont input[type="text"],
+.contact-cont input[type="email"],
+.contact-cont textarea,
+.contact-cont select {
+    width: 80%;
+    font-size: 1em;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid #4d4d4d;
+    color: #999;
+    outline: none;
+}
+
+.c-placeholder::-webkit-input-placeholder {
+  	color: #999;
+}
+
+.contact-cont input[type="text"],
+.contact-cont input[type="email"],
+.contact-cont textarea,
+.contact-cont select,
+.contact-cont input[type="radio"] {
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.contact-cont input[type="submit"] {
+   text-transform: uppercase;
+   font-size: 0.9em;
+   font-weight: 600;
+   padding: 15px 60px;
+   border: none;
+   background-color: #fff;
+   color: #4d4d4d;
+   border: 2px #4d4d4d solid; 
+}
+
+iframe {
+    width: 95%;
+    height: 250px;
+    border: none;
+}
+.contact-form {
+	background-color: #f9f9f9;
+	width: 95%;
+	padding: 40px 0 40px 80px;
+	
+}
+
+/*----------------news page styling------------*/
+
+.h-market-section{
+	width: 80%;
+	margin: 20px auto;
+	background-color: #f7f7f7;
+	
+}
+.news-article h3 {
+	color: #312f2e;
+}
+.news-article h2{
+	text-align: left;
+	color: #333;
+	font-weight: bolder;
+	border-left: 2px solid #333;
+}
+.news-article p {
+	color: #c3c1c0;
+	padding: 40px 40px 2px 0;
+	font-size: 0.9em;
+
+}
+.house-market {
+	padding: 40px 20px;
+}
+.mortgage-section{
+	width: 80%;
+	margin: 20px auto 80px;
+}
+.chart {
+	padding: 80px 20px 0 60px;
+}
+
+
+/* INDIVIDUAL PROPERTIES */
+
+.house1 {
+	width: 80%;
+	margin: 80px auto;
+	background-color: #f7f7f7;
+	
+}
+
+.house1 p{
+	color:#999;
+}
+.g-home{
+	width: 90%;
+	padding: 80px 10px 0 80px;
+	text-align: left;
+
+}
+.h-img {
+	width: 48%;
+	padding: 10px;
+	
+}
+.home-info {
+	padding: 80px 80px 0 10px;
+}
+.home-info h2 {
+	padding: 0;
+}
+.home-amenities {
+	margin-top: 50px;
+
+}
+.home-info p{
+	text-align: left;
+	
+	font-size: 1em;
+}
+.home-info h2{
+	text-align: left;
+	font-weight: 600;
+	
+}
+.home-info .more {
+	width: 100%;
+	margin-top: 50px;
+
+}
+
